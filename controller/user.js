@@ -18,7 +18,7 @@ module.exports = {
       email: req.body.email
     }).then(user => {
       if (user) {
-        return res.status(400).json({
+        return rsudo apt-get -o Dpkg::Options::="--force-overwrite" install yarnes.status(400).json({
           email: "Email already exists"
         });
       } else {
@@ -69,7 +69,7 @@ module.exports = {
           };
           jwt.sign(
             payload,
-            "secret",
+            process.env.SECRET,
             {
               expiresIn: 3600
             },
